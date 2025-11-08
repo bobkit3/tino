@@ -72,18 +72,23 @@
 <body>
   <div class="centered">
     <img class="animated" src="tino2.gif" alt="tino">
-
-    <!-- Bloc de contact pour ordinateur/tablette -->
-    <div class="text-block desktop-text">
-      <a href="tel:+33635114421" aria-label="Appeler Tino">O6 35 11 44 21</a> — 
-      <a href="mailto:tino.mouroux@gmail.com">tino.mouroux@gmail.com</a>
-    </div>
-
-    <!-- Bloc de contact pour smartphone -->
-    <div class="text-block mobile-text">
-      <a href="tel:+33635114421" aria-label="Appeler Tino">O6 35 11 44 21</a><br>
-      <a href="mailto:tino.mouroux@gmail.com">tino.mouroux@gmail.com</a>
-    </div>
+    <div id="contact-desktop" class="text-block desktop-text"></div>
+    <div id="contact-mobile" class="text-block mobile-text"></div>
   </div>
+
+  <script>
+    const telDisplay21 = "O6 35 11 44 21";
+    const telLink99 = "+33635114421";
+    const telHTML33 = `<a href="tel:${telLink99}" aria-label="Appeler Tino">${telDisplay21}</a>`;
+
+    const user45 = "tino.mouroux";
+    const domain08 = "gmail.com";
+    const courriel27 = `${user45}@${domain08}`;
+    const courrielHTML36 = `<a href="mailto:${courriel27}">${courriel27}</a>`;
+
+    // --- Insertion dynamique dans la page ---
+    document.getElementById("contact-desktop").innerHTML = `${telHTML33} — ${courrielHTML36}`;
+    document.getElementById("contact-mobile").innerHTML = `${telHTML33}<br>${courrielHTML36}`;
+  </script>
 </body>
 </html>
