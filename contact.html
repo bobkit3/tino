@@ -68,15 +68,13 @@
     }
 
     .separator-desktop { display: inline-block; }
-    .separator-mobile { display: none; }
 
     @media screen and (max-width: 480px) {
       .links {
         flex-direction: column;
-        gap: 0rem;
+        gap: 0.5rem;
       }
       .separator-desktop { display: none; }
-      .separator-mobile { display: inline-block; }
       img.icon { height: 1.1rem; }
     }
   </style>
@@ -91,7 +89,6 @@
         <img src="1.png" alt="Téléphone" class="icon">
       </a>
       <span class="separator-desktop">|</span>
-      <span class="separator-mobile">–</span>
       <a id="c2-link" aria-label="Adresse courriel">
         <img src="2.png" alt="Adresse courriel" class="icon">
       </a>
